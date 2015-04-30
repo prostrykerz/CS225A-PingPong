@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><%= pageName %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        html, body {
+          height: 100%;
+          margin: 0px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(/img/oculus.jpg);
+          padding-bottom: 50px;
+        }
+
+        .main {
+          vertical-align: middle;
+          width: 100%;
+          text-align: center;
+        }
+
+        #logo_container {
+          margin: 0 auto;
+          max-height: 100px;
+          text-align: center;
+        }
+        #infocontainer {
+          width: 100%;
+        }
+        #aboutus {
+          margin: 0 0 0 100px;
+          color: white;
+          text-align: left;
+          width: 600px;
+          float: left;
+        }
+
+        #aboutus h2 {
+          color: white
+        }
+
+        #team {
+          max-width: 600px;
+          color: white;
+          float:right;
+          margin-right: 100px;text-align: center;
+        }
+        .teamimg {
+          max-width: 100px;
+          max-height: 100px;
+          margin: 10px;
+        }
+
+        #navbar{
+          margin-left: 200px;
+          margin-right: 200px;
+          height: 50px;
+        }
+
+        #navbar ul li a {
+          vertical-align: middle;
+          display: block;
+          height: 50px;
+          font-size: 24px;
+          text-align: center;
+          padding-top: 10px;
+        }
+
+        #navbar ul li {
+          display: table-cell;
+          height: 50px;
+          list-style-type: none;
+          vertical-align: middle;
+        }
+
+        #navbar ul {
+          height: 100%;
+          width: 100%;
+          display: table;
+          table-layout: fixed;
+          margin-left: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60171248-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="navbar">
+        <ul>
+          <li><a href="/">Kuka Pong</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/tech">The Technology</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="infocontainer">
+      <div id="aboutus">
+        <h2>About Us</h2>
+        Virtual reality provides the user a completely immersive environment - allowing the user to engage with a world in the closest way possible. The only drawback to this immersion is the finality; setting up an environment is time intensive, and it is currently impossible to change the world dynamically, as it is being experienced. For our project, we will build a platform that will allow a separate individual - a moderator - to dynamically modify the world the user is experiencing on the fly from another device. This capability will allow for a truly real-time experience unlike what is possible in current virtual reality technology.
+        <br />
+        Our Email: <a style="color: black; text-decoration: underline" href="mailto:kukapong_team@lists.stanford.edu">kukapong_team@lists.stanford.edu</a>
+      </div>
+      <div id="team">
+        <h2>The Team</h2>
+        <table>
+          <tr>
+            <td><img class="teamimg" src="/img/AndrewProfile.jpg" /><br />Andrew Khor</td>
+            <td><img class="teamimg" src="/img/aaron_broder.jpg" /><br />Aaron Broder</td>
+            <td><img class="teamimg" src="/img/BrianLam_photo.jpg" /><br />Brian Lam</td>
+          </tr>
+          <tr>
+            <td><img class="teamimg" src="/img/travis_le.jpg" /><br />Travis Le</td>
+            <td><img  class="teamimg" src="/img/Nhien_photo.jpg" /><br />Nhien Tran</td>
+          </tr>
+        </table>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

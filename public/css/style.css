@@ -1,0 +1,33 @@
+.btn-kukapong {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #FFF;
+  background-color: #F7D338;
+  border: 1px solid #F7D338;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.form-inline .form-group.full_width {
+  width: 97%;
+}
+
+.btn:hover {
+  background-color: #F7D338;
+}
+
+.img-circle {
+  width: 156px;
+  height: 156px;
+}
+
+.table{
+  background-color: #ffffff;
+}

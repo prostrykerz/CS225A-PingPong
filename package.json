@@ -1,0 +1,20 @@
+{
+  "name": "KukaPong",
+  "version": "0.0.1",
+  "private": true,
+  "domains": [
+    "kukapong.herokuapp.com.com"
+  ],
+  "scripts": {
+    "start": "app.js"
+  },
+  "version": "0.0.0",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "ejs": "0.8.x",
+    "express": "3.1.x",
+    "nodemailer": "x"
+  }
+}
