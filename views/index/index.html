@@ -247,6 +247,36 @@
               <p> The controller for Milestone 1 will be a task space controller with a position gain to act on the error between current position and the desired intercept point. These desired coordinated will be updated continuously as the ball’s predicted trajectory is updated. A required velocity will be calculated based on the predicted time of intercept between the paddle and the ball, which will be monitored by a damper to keep the velocity from exceeding hardware limits.</p>
             </div>
           </div>
+          <br>
+          <div class="row">
+            <div class="col-lg-offset-2 col-lg-8 text-center">
+              <h4>Controller Tests in Simulation</h3>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-offset-2 col-lg-8">
+                <h5>Milestone 1</h5>
+                <ul>
+                  <li><p class="text-muted">Move the kuka to a default position where the base and end effector are perpendicular and facing away from the ping pong table</p>
+                  </li>
+                  <li><p class="text-muted">Manually input coordinates of hypothetical ball positions and have the end effector reach the desired position without running into singularities or unstable motions</p></li>
+                  <li><p class="text-muted">Input an XY trajectory and move the end effector to reach the trajectory within a certain time</p></li>
+                  <li><p class="text-muted">Add a Z component to the trajectory affected by gravity and have the end effector reach a point on the new trajectory within a certain time
+                  </p></li>
+                <ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-offset-2 col-lg-8">
+              <h5>Milestone 2</h5>
+              <ul>
+                <li><p class="text-muted">Move kuka end effector to coordinates with a specified orientation throughout the entire path. (paddle should always be perpendicular to the table)</p>
+                </li>
+                <li><p class="text-muted">Move end effector to reach coordinates at a specified time with a goal velocity
+                </p></li>
+              <ul>
+            </div>
+          </div>
       </div>
   </section>
 
