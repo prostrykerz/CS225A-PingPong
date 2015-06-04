@@ -13,12 +13,12 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="2" class=""></li> -->
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item">
+        <div class="item active">
           <img class="first-slide" src="/img/carousel/1.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
@@ -32,13 +32,13 @@
             </div>
           </div>
         </div>
-        <div class="item active">
+        <!-- <div class="item">
           <img class="third-slide" src="/img/carousel/3.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -51,6 +51,109 @@
     </div>
   </div>
   </header>
+
+  <section id="overview">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Project Overview</h2>
+            <h3 class="section-subheading text-muted">A project for Stanford University CS225A: Experimental Robotics</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>OptiTrack</h4>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our first task when we started this project was to implement a system which we could use to track the position of the pingpong ball. To do so, we used the OptiTrack system that was built into the Stanford Robotics Laboratory. This system was an easy choice since it had already been calibrated and provided data at an extremely fast rate (every few milliseconds). The only problem with this system is that the OptiTrack cameras only covered a limit range near our robot, so we did not get the full field of view that we wanted. After connecting to OptiTrack, we created a velocity filter that identified the pingpong ball moving in the proper frame of reference, removed any extraneous markers picked up by OptiTrack, and reduced noise in the OptiTrack readings.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Ball Trajectory</h4>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The motion of the ping pong ball is modeled using basic kinematic equations. Using the ball's initial position and velocity, its motion is projected to the edge of the table where the KUKA IIWA is positioned to intercept. Initially for simulation, all collisions were considered 100% elastic. After incorporating OptiTrack to track the ping pong ball, these kinematic predictions were frequently updated using real time position and velocity measurements. An energy loss factor was added to the computations involving collisions based on experimental calibration.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Orientation Control</h4>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to control where we redirect the ping pong ball after the swing we implemented an orientation controller to change the angle of the paddle. The robot has a simple orientation controller using the link immediately before the end effector as the base orientation reference. This configuration allows us to have control over the z-axis rotation of the end effector, which was all we needed for our current milestones. For future iterations, we would have the orientation controller use the base joint as the orientation reference so we could have control over all three degrees of rotation throughout the swing.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Paddle Trajectory Generation</h4>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The paddle trajectory generation function limits the velocity and acceleration of our kuka arm. The ball prediction model specifies the anticipated position of the ball and the target position of the paddle. Using a paddle trajectory library built by Trosten Kruger, our program takes the current and target positions of the robot and constructs a time optimal path between the two points. This path is broken down into many short segments, with the length of those segments determined by velocity and acceleration limits. As the paddle approaches the end of one target segment, the next target segment is updated so the paddle continuously progresses along the path.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Challenges</h4>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some of the challenges that we faced included: limited workspace, limited vision, swing speed and timing, and interception accuracy. As for the limited workspace and vision, we compensated by using half of the table that fit within our constraints and limited our vision to only the appropriate area. As for the swing, we increased the stiffness of the robot to reduce the lag between the computer and the robot, added a followthrough stroke, and timed it such that we would hit the ball when it got within 0.3 seconds of the robot. Finally, we continuously tweaked the final orientation, predicted location, and timing to get the robot to accurately hit the ball within its sweet spot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="final_prod" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Final Product</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <video width="100%" height="100%" controls>
+            <source src="video/1.mov">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <video width="100%" height="100%" controls>
+            <source src="video/2.mov">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <video width="100%" height="100%" controls>
+            <source src="video/3.mov">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <video width="100%" height="100%" controls>
+            <source src="video/4.mov">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <video width="100%" height="100%" controls>
+            <source src="video/5.mov">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- How it Works Section -->
   <!-- <section id="services">
@@ -96,7 +199,9 @@
           <div class="row">
               <div class="col-lg-12 text-center">
                   <h2 class="section-heading">Timeline</h2>
-                  <h3 class="section-subheading text-muted">A project for Stanford University CS225A: Experimental Robotics</h3>
+                  <br>
+                  <br>
+                  <!-- <h3 class="section-subheading text-muted">A project for Stanford University CS225A: Experimental Robotics</h3> -->
               </div>
           </div>
           <div class="row">
@@ -171,7 +276,7 @@
                                     </p></li>
                                     <li><p class="text-muted">Create state machine to simplify control logic and for easier incremental development
                                     </p></li>
-                                    <li><p class="text-muted">Return ball to desired position
+                                    <li><p class="text-muted">Reset robot to neutral position
                                     </p></li>
                                   <ul>
                               </div>
@@ -196,7 +301,7 @@
                               </div>
                               <div class="timeline-body">
                                   <ul>
-                                    <li><p class="text-muted">Reset robot to neutral position</p>
+                                    <li><p class="text-muted">Return ball to desired position</p>
                                     </li>
                                     <li><p class="text-muted">Successful volley (multiple returns)
                                     </p></li>
